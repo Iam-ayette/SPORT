@@ -1,0 +1,38 @@
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-9 mx-auto text-center">
+                <h1 class="text-white">Add Stadiums</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="site-section">
+    <div class="container">
+        <div class="row" style="margin-left: 25%;">
+            <div class="col-lg-7">
+                <form #stadiumForm="ngForm" (ngSubmit)="addStadium()">
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="stadium.name" class="form-control" name="name"
+                            placeholder="Name ">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="stadium.country" class="form-control" country="country"
+                            placeholder="country">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" [(ngModel)]="stadium.capacity" class="form-control" capacity="capacity"
+                            placeholder="capacity">
+                    </div>
+                  
+                    <div class="form-group text-center">
+                        <input type="submit" class="btn btn-primary py-3 px-5" value="Add">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

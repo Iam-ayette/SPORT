@@ -1,0 +1,25 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Country</th>
+            <th scope="col">Capacity</th>
+             <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stadium of StadiumsTab">
+            <th scope="row">{{stadium.id}}</th>
+            <td>{{stadium.name}}</td>
+            <td>{{stadium.country}}</td>
+            <td>{{stadium.capacity}}</td>
+             <td>
+                <button class="btn btn-info" (click)="display(stadium.id)">Display</button>
+                <button class="btn btn-warning" (click)="edit(stadium.id)">Edit</button>
+                <button class="btn btn-danger" (click)="delete(stadium.id)">Delete</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
